@@ -1,0 +1,14 @@
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+ExecStart=/opt/minecraft/server/start.sh
+Group=minecraft
+ReadWritePaths=/opt/minecraft/server
+Type=simple
+User=minecraft
+WorkingDirectory=/opt/minecraft/server
+
+[Unit]
+After=network.target
+Description=Spigot Minecraft Server
